@@ -13,12 +13,12 @@
 		7736D8331B40B6B800ABC1C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7736D8321B40B6B800ABC1C5 /* Images.xcassets */; };
 		7736D8361B40B6B800ABC1C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7736D8341B40B6B800ABC1C5 /* LaunchScreen.xib */; };
 		7736D8421B40B6B800ABC1C5 /* FoodlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736D8411B40B6B800ABC1C5 /* FoodlogTests.swift */; };
-		7736D84C1B40B76D00ABC1C5 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7736D84B1B40B76D00ABC1C5 /* opencv2.framework */; };
 		7736D84E1B40B80700ABC1C5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7736D84D1B40B80700ABC1C5 /* libz.dylib */; };
 		7736D8571B41863300ABC1C5 /* UIImage+CVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7736D8561B41863300ABC1C5 /* UIImage+CVMat.mm */; };
 		7736D85A1B418A0800ABC1C5 /* CVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7736D8591B418A0800ABC1C5 /* CVWrapper.mm */; };
 		7736D8631B42BE8100ABC1C5 /* imageProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7736D8611B42BE8100ABC1C5 /* imageProcessing.cpp */; };
 		7736D8691B43290E00ABC1C5 /* PictureSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736D8681B43290E00ABC1C5 /* PictureSettingsViewController.swift */; };
+		7781BFEB1B435B9C008A14DA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7781BFEA1B435B9C008A14DA /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		7736D83B1B40B6B800ABC1C5 /* FoodlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7736D8401B40B6B800ABC1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7736D8411B40B6B800ABC1C5 /* FoodlogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodlogTests.swift; sourceTree = "<group>"; };
-		7736D84B1B40B76D00ABC1C5 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../../Documents/OpenCV/opencv2.framework; sourceTree = "<group>"; };
 		7736D84D1B40B80700ABC1C5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7736D8501B40BADD00ABC1C5 /* Foodlog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Foodlog-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		7736D8551B41863300ABC1C5 /* UIImage+CVMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CVMat.h"; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		7736D8611B42BE8100ABC1C5 /* imageProcessing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imageProcessing.cpp; sourceTree = "<group>"; };
 		7736D8621B42BE8100ABC1C5 /* imageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageProcessing.h; sourceTree = "<group>"; };
 		7736D8681B43290E00ABC1C5 /* PictureSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureSettingsViewController.swift; sourceTree = "<group>"; };
+		7781BFEA1B435B9C008A14DA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7781BFEB1B435B9C008A14DA /* opencv2.framework in Frameworks */,
 				7736D84E1B40B80700ABC1C5 /* libz.dylib in Frameworks */,
-				7736D84C1B40B76D00ABC1C5 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7736D84D1B40B80700ABC1C5 /* libz.dylib */,
-				7736D84B1B40B76D00ABC1C5 /* opencv2.framework */,
+				7781BFEA1B435B9C008A14DA /* opencv2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -384,6 +384,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Olga/Documents/OpenCV,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Foodlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -401,6 +402,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Olga/Documents/OpenCV,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Foodlog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -462,6 +464,7 @@
 				7736D8471B40B6B800ABC1C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7736D8481B40B6B800ABC1C5 /* Build configuration list for PBXNativeTarget "FoodlogTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +473,7 @@
 				7736D84A1B40B6B800ABC1C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

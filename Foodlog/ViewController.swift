@@ -39,6 +39,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         let pictureSettingsViewController = self.storyboard!.instantiateViewControllerWithIdentifier("PictureSettingsViewController") as! PictureSettingsViewController
         
+        //Switch to pictureSettingView
         presentViewController(pictureSettingsViewController, animated: true) { () -> Void in
             pictureSettingsViewController.loadPicture(self.takenImage)
         }
