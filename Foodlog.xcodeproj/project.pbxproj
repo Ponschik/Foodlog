@@ -19,6 +19,7 @@
 		7736D8631B42BE8100ABC1C5 /* imageProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7736D8611B42BE8100ABC1C5 /* imageProcessing.cpp */; };
 		7736D8691B43290E00ABC1C5 /* PictureSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736D8681B43290E00ABC1C5 /* PictureSettingsViewController.swift */; };
 		7781BFEB1B435B9C008A14DA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7781BFEA1B435B9C008A14DA /* opencv2.framework */; };
+		7781BFED1B436434008A14DA /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7781BFEC1B436434008A14DA /* OCRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		7736D8621B42BE8100ABC1C5 /* imageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageProcessing.h; sourceTree = "<group>"; };
 		7736D8681B43290E00ABC1C5 /* PictureSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureSettingsViewController.swift; sourceTree = "<group>"; };
 		7781BFEA1B435B9C008A14DA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		7781BFEC1B436434008A14DA /* OCRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				7736D82B1B40B6B800ABC1C5 /* AppDelegate.swift */,
 				7736D82D1B40B6B800ABC1C5 /* ViewController.swift */,
 				7736D8681B43290E00ABC1C5 /* PictureSettingsViewController.swift */,
+				7781BFEC1B436434008A14DA /* OCRViewController.swift */,
 				7736D82F1B40B6B800ABC1C5 /* Main.storyboard */,
 				7736D8321B40B6B800ABC1C5 /* Images.xcassets */,
 				7736D8341B40B6B800ABC1C5 /* LaunchScreen.xib */,
@@ -254,6 +257,7 @@
 				7736D82E1B40B6B800ABC1C5 /* ViewController.swift in Sources */,
 				7736D8571B41863300ABC1C5 /* UIImage+CVMat.mm in Sources */,
 				7736D82C1B40B6B800ABC1C5 /* AppDelegate.swift in Sources */,
+				7781BFED1B436434008A14DA /* OCRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
