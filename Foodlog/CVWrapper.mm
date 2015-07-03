@@ -49,6 +49,13 @@
 //    return result;
 //}
 
++ (UIImage *)showAsBinary:(UIImage *)inputImage withThreshold:(int32_t)threshold brightness:(int32_t)brightness andContrast:(Float32)contrast{
+    
+    cv::Mat binaryMat = toBinary(inputImage.CVMat3, threshold, brightness, contrast);
+    UIImage* result = [UIImage imageWithCVMat:binaryMat];
+    return result;
+}
+
 + (UIImage *)showAsBinary:(UIImage *)inputImage withThreshold:(int)threshold{
     
     

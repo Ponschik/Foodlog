@@ -14,5 +14,6 @@ cv::Mat stitch (std::vector <cv::Mat> & images);
 int numOfRows (cv::Mat image);
 cv::Mat toBinary(cv::Mat image, int threshold);
 cv::Mat toBinary(cv::Mat image);
+cv::Mat toBinary(cv::Mat image, int threshold, int brightness, float contrast);
 
 #endif

@@ -38,6 +38,41 @@ int parseCmdArgs(int argc, char** argv);
 //    return pano;
 //}
 
+cv::Mat toBinary(cv::Mat image, int threshold, int brightness, float contrast){
+    
+//    cv::Mat result;
+//    result.create(image.rows, image.cols, CV_8UC4);
+    
+    cv::Mat binaryImage;
+    binaryImage.create(image.rows, image.cols, CV_8UC1);
+    
+    for(int x = 0; x < image.cols; x++){
+        for(int y = 0; y < image.rows; y++){
+            Vec3b pixel = image.at<Vec3b>(y,x);
+            int b = pixel[0];
+            int g = pixel[1];
+            int r = pixel[2];
+            
+            r = saturate_cast<uchar>(r * contrast + brightness);
+            g = saturate_cast<uchar>(g * contrast + brightness);
+            b = saturate_cast<uchar>(b * contrast + brightness);
+            
+//            Vec3b destinationPixel(b, g, r);
+//            result.at<Vec3b>(y, x) = destinationPixel;
+            
+            int pixelBrightness = (r + g + b) / 3;
+            
+            if (pixelBrightness > threshold){
+                binaryImage.at<uchar>(y,x) = 255;
+            } else {
+                binaryImage.at<uchar>(y,x) = 0;
+            }
+            
+        }
+    }
+    return binaryImage;
+}
+
 cv::Mat toBinary(cv::Mat image, int threshold) {
     
     cv::Mat binaryImage;

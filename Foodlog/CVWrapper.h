@@ -19,6 +19,8 @@
 
 + (UIImage*) showAsBinary:(UIImage*)inputImage withThreshold:(int32_t)threshold;
 
++ (UIImage*) showAsBinary:(UIImage*)inputImage withThreshold:(int32_t)threshold brightness:(int32_t)brightness andContrast:(Float32)contrast;
+
 + (UIImage*) showAsBinary:(UIImage*)inputImage;
 
 + (int) numberOfRows:(UIImage *)inputImage;
