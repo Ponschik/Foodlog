@@ -108,11 +108,25 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         takenImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         
+        
+        var resizedImage = takenImage
+        
+        var newDimension = takenImage.size.height/2
+        var widthOffset = (takenImage.size.width - newDimension)/2
+        var heightOffset = (takenImage.size.height - newDimension)/2
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: newDimension, height: newDimension), false, 0)
+        resizedImage.drawAtPoint(CGPointMake(-widthOffset, -heightOffset), blendMode:kCGBlendModeCopy , alpha: 1)
+        resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        
+        
         let pictureSettingsViewController = self.storyboard!.instantiateViewControllerWithIdentifier("PictureSettingsViewController") as! PictureSettingsViewController
         
         //Switch to pictureSettingView
         presentViewController(pictureSettingsViewController, animated: true) { () -> Void in
-            pictureSettingsViewController.loadPicture(self.takenImage)
+            pictureSettingsViewController.loadPicture(resizedImage)
         }
     }
     
