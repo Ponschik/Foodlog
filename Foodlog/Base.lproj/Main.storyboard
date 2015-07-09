@@ -71,9 +71,6 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="CEZ-xX-1PW" userLabel="Brightness Slider">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="14" y="581" width="361" height="31"/>
-                                </variation>
                                 <connections>
                                     <action selector="brightnessChanged:" destination="gN2-dU-Rzb" eventType="touchUpInside" id="3te-dg-5dI"/>
                                     <action selector="changeBrightnessLabel:" destination="gN2-dU-Rzb" eventType="valueChanged" id="mie-nV-gx5"/>
@@ -155,7 +152,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UKy-89-oPH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UKy-89-oPH">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="128" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="G8M-LQ-wqr" userLabel="Threshold Slider">
@@ -195,8 +192,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="G8M-LQ-wqr" secondAttribute="trailing" constant="11" id="mMo-Ge-Phn"/>
                             <constraint firstItem="7JI-l5-Mg1" firstAttribute="baseline" secondItem="vQj-tJ-Cib" secondAttribute="firstBaseline" id="viW-Gj-Vxq"/>
                             <constraint firstItem="CEZ-xX-1PW" firstAttribute="trailing" secondItem="G8M-LQ-wqr" secondAttribute="trailing" id="wX4-b2-nej"/>
-                            <constraint firstItem="SSU-I3-xsr" firstAttribute="top" secondItem="CEZ-xX-1PW" secondAttribute="bottom" constant="8" symbolic="YES" id="x4H-Ax-5OI"/>
-                            <constraint firstItem="CEZ-xX-1PW" firstAttribute="top" secondItem="esq-hr-QhF" secondAttribute="bottom" constant="3" id="xZU-A0-juu"/>
+                            <constraint firstItem="SSU-I3-xsr" firstAttribute="top" secondItem="CEZ-xX-1PW" secondAttribute="bottom" constant="8" symbolic="YES" id="x4H-Ax-5OI">
+                                <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                            </constraint>
+                            <constraint firstItem="CEZ-xX-1PW" firstAttribute="top" secondItem="esq-hr-QhF" secondAttribute="bottom" constant="3" id="xZU-A0-juu">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="f9M-6d-eiG" firstAttribute="top" secondItem="SSU-I3-xsr" secondAttribute="bottom" constant="8" symbolic="YES" id="xtk-JJ-5Bs"/>
                         </constraints>
                         <variation key="default">
@@ -289,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0j-1Y-JOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868.5" y="366"/>
+            <point key="canvasLocation" x="877.5" y="366"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yDf-7I-KK0">
