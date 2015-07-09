@@ -313,28 +313,46 @@
                                     <action selector="takePhoto:" destination="hIy-J4-8tr" eventType="touchUpInside" id="HsD-WX-Skw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNb-H4-5mN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Take a Photo with customize camera">
+                                    <color key="titleColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhotoWithAVCamera:" destination="hIy-J4-8tr" eventType="touchUpInside" id="lXW-Ge-NHz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Z00-Rr-qT3" secondAttribute="bottom" constant="20" symbolic="YES" id="9is-nB-QiF"/>
                             <constraint firstItem="Z00-Rr-qT3" firstAttribute="centerX" secondItem="D8U-pB-U3N" secondAttribute="centerX" id="B15-DB-DVT"/>
+                            <constraint firstItem="HNb-H4-5mN" firstAttribute="centerX" secondItem="Z00-Rr-qT3" secondAttribute="centerX" id="Q2r-7M-opF"/>
+                            <constraint firstItem="Z00-Rr-qT3" firstAttribute="top" secondItem="HNb-H4-5mN" secondAttribute="bottom" constant="8" symbolic="YES" id="gMC-ft-i80"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Z00-Rr-qT3"/>
+                                <exclude reference="HNb-H4-5mN"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Q2r-7M-opF"/>
                                 <exclude reference="9is-nB-QiF"/>
                                 <exclude reference="B15-DB-DVT"/>
+                                <exclude reference="gMC-ft-i80"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Z00-Rr-qT3"/>
+                                <include reference="HNb-H4-5mN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Q2r-7M-opF"/>
                                 <include reference="9is-nB-QiF"/>
                                 <include reference="B15-DB-DVT"/>
+                                <include reference="gMC-ft-i80"/>
                             </mask>
                         </variation>
                     </view>
